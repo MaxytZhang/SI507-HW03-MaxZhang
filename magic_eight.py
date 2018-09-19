@@ -5,7 +5,6 @@ def ask_question():
 
     return question
 
-
 while ask_question() != "quit":
     if ask_question() == "quit":
         break
