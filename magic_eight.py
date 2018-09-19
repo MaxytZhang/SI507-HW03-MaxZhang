@@ -13,6 +13,7 @@ def get_answer():
 
     num = random.randint(0, 19)
     answer = answer_list[num]
+    a = 10
     return answer
 
 print(get_answer())
