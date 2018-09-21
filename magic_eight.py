@@ -1,10 +1,12 @@
 import random
+
+
 def ask_question():
-    answer = input("What is your question?: ")
-    return answer
+    question = input("What is your question?: ")
+    while question[-1] != "?" and question != "quit":
+        question = input("I’m sorry, I can only answer questions.\nWhat is your question?: ")
+    return question
 
-
-ask_question()
 
 def get_answer():
     answer_list = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.",
@@ -16,4 +18,7 @@ def get_answer():
     a = 10
     return answer
 
-print(get_answer())
+
+while ask_question() != "quit":
+    print(get_answer())
+
